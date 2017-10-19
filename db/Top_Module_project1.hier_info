@@ -39,6 +39,52 @@ HEX_3[4] <= <VCC>
 HEX_3[5] <= <VCC>
 HEX_3[6] <= <VCC>
 HEX_3[7] <= <VCC>
+SW_SEL0 => SW_SEL0.IN1
+SW_SEL1 => SW_SEL1.IN1
+LED[0] <= Four_To_One_MUX:comb_19.f
+LED[1] <= <GND>
+LED[2] <= <GND>
+LED[3] <= <GND>
+LED[4] <= <GND>
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
+LED[8] <= <GND>
+LED[9] <= <GND>
+
+
+|Top_Module_project1|Four_To_One_MUX:comb_19
+w0 => w0.IN1
+w1 => w1.IN1
+w2 => w2.IN1
+w3 => w3.IN1
+s0 => s0.IN2
+s1 => s1.IN1
+f <= Two_To_One_MUX:finalStage.port3
+
+
+|Top_Module_project1|Four_To_One_MUX:comb_19|Two_To_One_MUX:stage0
+w0 => f.IN0
+w1 => f.IN0
+s0 => f.IN1
+s0 => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_Module_project1|Four_To_One_MUX:comb_19|Two_To_One_MUX:stage1
+w0 => f.IN0
+w1 => f.IN0
+s0 => f.IN1
+s0 => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_Module_project1|Four_To_One_MUX:comb_19|Two_To_One_MUX:finalStage
+w0 => f.IN0
+w1 => f.IN0
+s0 => f.IN1
+s0 => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top_Module_project1|seven_segment:SevenSeg0

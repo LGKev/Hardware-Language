@@ -60,6 +60,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
 					"name" : "SW_A[0]",
 					"strict" : false
 				},
@@ -89,6 +93,10 @@
 				},
 				{
 					"name" : "SW_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_SEL0",
 					"strict" : false
 				}
 			]

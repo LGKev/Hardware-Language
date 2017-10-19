@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top_Module_project1
-Thu Oct 19 12:22:09 2017
+Thu Oct 19 13:16:55 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "Four_To_One_MUX:comb_19"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,7 +44,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 19 12:22:09 2017       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 19 13:16:55 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; Top_Module_project1                         ;
 ; Top-level Entity Name              ; Top_Module_project1                         ;
@@ -52,7 +53,7 @@ agreement for further details.
 ;     Total combinational functions  ; 14                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 40                                          ;
+; Total pins                         ; 52                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -164,14 +165,16 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
-; ../seven_segment/seven_segment.v ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/16.1/Projects/seven_segment/seven_segment.v         ;         ;
-; Top_Module_project1.v            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; ../seven_segment/seven_segment.v ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/16.1/Projects/seven_segment/seven_segment.v                  ;         ;
+; Top_Module_project1.v            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v          ;         ;
+; output_files/Four_To_One_MUX.v   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/output_files/Four_To_One_MUX.v ;         ;
+; output_files/Two_To_ONE_MUX.v    ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/output_files/Two_To_ONE_MUX.v  ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -195,14 +198,14 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 0             ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 40            ;
+; I/O pins                                    ; 52            ;
 ;                                             ;               ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; SW_A[0]~input ;
 ; Maximum fan-out                             ; 7             ;
-; Total fan-out                               ; 110           ;
-; Average fan-out                             ; 1.17          ;
+; Total fan-out                               ; 123           ;
+; Average fan-out                             ; 1.04          ;
 +---------------------------------------------+---------------+
 
 
@@ -211,7 +214,7 @@ agreement for further details.
 +------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                          ; Entity Name         ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------------+--------------+
-; |Top_Module_project1         ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 40   ; 0            ; 0          ; |Top_Module_project1                         ; Top_Module_project1 ; work         ;
+; |Top_Module_project1         ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 52   ; 0            ; 0          ; |Top_Module_project1                         ; Top_Module_project1 ; work         ;
 ;    |seven_segment:SevenSeg0| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Top_Module_project1|seven_segment:SevenSeg0 ; seven_segment       ; work         ;
 ;    |seven_segment:SevenSeg1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Top_Module_project1|seven_segment:SevenSeg1 ; seven_segment       ; work         ;
 +------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------------+--------------+
@@ -233,20 +236,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Four_To_One_MUX:comb_19"                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; w0     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; w0[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; w1     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; w1[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; w2     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; w2[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; w3     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; w3[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 40                          ;
-; cycloneiii_lcell_comb ; 17                          ;
-;     normal            ; 17                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
+; boundary_port         ; 52                          ;
+; cycloneiii_lcell_comb ; 19                          ;
+;     normal            ; 19                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
 ;         4 data inputs ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.44                        ;
+; Average LUT depth     ; 1.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -265,46 +284,78 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Oct 19 12:21:52 2017
+    Info: Processing started: Thu Oct 19 13:16:37 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top_Module_project1 -c Top_Module_project1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 5 design units, including 5 entities, in source file /intelfpga_lite/16.1/projects/logical_v2/logical.v
+    Info (12023): Found entity 1: logical File: C:/intelFPGA_lite/16.1/Projects/Logical_v2/logical.v Line: 1
+    Info (12023): Found entity 2: _AND File: C:/intelFPGA_lite/16.1/Projects/Logical_v2/logical.v Line: 13
+    Info (12023): Found entity 3: _OR File: C:/intelFPGA_lite/16.1/Projects/Logical_v2/logical.v Line: 19
+    Info (12023): Found entity 4: _EXOR File: C:/intelFPGA_lite/16.1/Projects/Logical_v2/logical.v Line: 25
+    Info (12023): Found entity 5: _NOT File: C:/intelFPGA_lite/16.1/Projects/Logical_v2/logical.v Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file /intelfpga_lite/16.1/projects/seven_segment/seven_segment.v
     Info (12023): Found entity 1: seven_segment File: C:/intelFPGA_lite/16.1/Projects/seven_segment/seven_segment.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file top_module_project1.v
     Info (12023): Found entity 1: Top_Module_project1 File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mode_selection.v
+    Info (12023): Found entity 1: Mode_Selection File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Mode_Selection.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/fourbit_add.v
+    Info (12023): Found entity 1: Fourbit_add File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/output_files/Fourbit_add.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/four_to_one_mux.v
+    Info (12023): Found entity 1: Four_To_One_MUX File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/output_files/Four_To_One_MUX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/two_to_one_mux.v
+    Info (12023): Found entity 1: Two_To_One_MUX File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/output_files/Two_To_ONE_MUX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/full_add.v
+    Info (12023): Found entity 1: full_add File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/output_files/full_add.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at Top_Module_project1.v(51): instance has no name File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 51
 Info (12127): Elaborating entity "Top_Module_project1" for the top level hierarchy
-Info (12128): Elaborating entity "seven_segment" for hierarchy "seven_segment:SevenSeg0" File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+Warning (10034): Output port "LED[9..1]" at Top_Module_project1.v(35) has no driver File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+Info (12128): Elaborating entity "Four_To_One_MUX" for hierarchy "Four_To_One_MUX:comb_19" File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 51
+Info (12128): Elaborating entity "Two_To_One_MUX" for hierarchy "Four_To_One_MUX:comb_19|Two_To_One_MUX:stage0" File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/output_files/Four_To_One_MUX.v Line: 8
+Info (12128): Elaborating entity "seven_segment" for hierarchy "seven_segment:SevenSeg0" File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 58
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX_0[7]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 12
-    Warning (13410): Pin "HEX_1[7]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 13
-    Warning (13410): Pin "HEX_2[0]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 14
-    Warning (13410): Pin "HEX_2[1]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 14
-    Warning (13410): Pin "HEX_2[2]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 14
-    Warning (13410): Pin "HEX_2[3]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 14
-    Warning (13410): Pin "HEX_2[4]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 14
-    Warning (13410): Pin "HEX_2[5]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 14
-    Warning (13410): Pin "HEX_2[6]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 14
-    Warning (13410): Pin "HEX_2[7]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 14
-    Warning (13410): Pin "HEX_3[0]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 15
-    Warning (13410): Pin "HEX_3[1]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 15
-    Warning (13410): Pin "HEX_3[2]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 15
-    Warning (13410): Pin "HEX_3[3]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 15
-    Warning (13410): Pin "HEX_3[4]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 15
-    Warning (13410): Pin "HEX_3[5]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 15
-    Warning (13410): Pin "HEX_3[6]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 15
-    Warning (13410): Pin "HEX_3[7]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 15
+    Warning (13410): Pin "HEX_0[7]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 23
+    Warning (13410): Pin "HEX_1[7]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 24
+    Warning (13410): Pin "HEX_2[0]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+    Warning (13410): Pin "HEX_2[1]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+    Warning (13410): Pin "HEX_2[2]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+    Warning (13410): Pin "HEX_2[3]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+    Warning (13410): Pin "HEX_2[4]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+    Warning (13410): Pin "HEX_2[5]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+    Warning (13410): Pin "HEX_2[6]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+    Warning (13410): Pin "HEX_2[7]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 25
+    Warning (13410): Pin "HEX_3[0]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 26
+    Warning (13410): Pin "HEX_3[1]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 26
+    Warning (13410): Pin "HEX_3[2]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 26
+    Warning (13410): Pin "HEX_3[3]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 26
+    Warning (13410): Pin "HEX_3[4]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 26
+    Warning (13410): Pin "HEX_3[5]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 26
+    Warning (13410): Pin "HEX_3[6]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 26
+    Warning (13410): Pin "HEX_3[7]" is stuck at VCC File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 26
+    Warning (13410): Pin "LED[1]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+    Warning (13410): Pin "LED[4]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+    Warning (13410): Pin "LED[5]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+    Warning (13410): Pin "LED[6]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+    Warning (13410): Pin "LED[7]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+    Warning (13410): Pin "LED[8]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
+    Warning (13410): Pin "LED[9]" is stuck at GND File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 35
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 32 output pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW_SEL1" File: C:/intelFPGA_lite/16.1/Projects/Top_DL_Project1/Top_Module_project1.v Line: 20
+Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 42 output pins
     Info (21061): Implemented 14 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 625 megabytes
-    Info: Processing ended: Thu Oct 19 12:22:09 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 623 megabytes
+    Info: Processing ended: Thu Oct 19 13:16:55 2017
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:40
 
 
