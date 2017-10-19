@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HEX_0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_B[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
